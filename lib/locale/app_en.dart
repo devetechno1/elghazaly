@@ -282,7 +282,7 @@ const Map<String, String> enLangs = {
   "featured_products_ucf": "Featured Products",
   "all_products_ucf": "All Products",
   "search_in_app_name": "Search In {app_name}...",
-  "app_name": "Deve Techno Store",
+  "app_name": "الغزالي",
   "no_carousel_image_found": "No carousel image found",
   "no_category_found": "No category found",
   "categories_ucf": "Categories",
@@ -921,4 +921,8 @@ const Map<String, String> enLangs = {
   "hello":"Hello",
   "please_enter_your_choice":'Please enter your choice (e.g. 3)',
   "blog_categories_ucf": "Blog Categories",
+  "app_name_desc":"El Ghazaly for Grocery Trading",
+  "review_app_ucf": "Review App",
+  "do_you_want_to_review_app": "Do you want to review our app ?",
+
 };

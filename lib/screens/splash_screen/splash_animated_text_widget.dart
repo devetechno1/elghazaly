@@ -11,30 +11,26 @@ class AnimatedTextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
         Padding(
           padding: const EdgeInsets.only(
             bottom: AppDimensions.paddingSupSmall,
           ),
-          child: Container(
-            height: 100,
-            width: 100,
-            padding: const EdgeInsets.all(6),
-            decoration: BoxDecoration(
-              color: MyTheme.white,
-              borderRadius: BorderRadius.circular(
-                AppDimensions.radiusSmall,
-              ),
-            ),
+          child: SizedBox(
+            height: 150,
+            width: 150,
             child: Image.asset(
               AppImages.splashScreenLogo,
-              filterQuality: FilterQuality.low,
+              filterQuality: FilterQuality.high,
+              fit: BoxFit.contain,
             ),
           ),
         ),
         Padding(
-          padding:
-              const EdgeInsets.only(bottom: AppDimensions.paddingSmallExtra),
+          padding: const EdgeInsets.only(
+            bottom: AppDimensions.paddingSmallExtra,
+          ),
           child: AnimatedTextKit(
             isRepeatingAnimation: false,
             animatedTexts: [
@@ -49,7 +45,7 @@ class AnimatedTextWidget extends StatelessWidget {
               ),
             ],
           ),
-        )
+        ),
       ],
     );
   }

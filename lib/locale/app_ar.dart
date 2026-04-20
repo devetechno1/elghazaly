@@ -178,7 +178,7 @@ const Map<String, String> arLangs = {
   "featured_products_ucf": "المنتجات المميزة",
   "all_products_ucf": "جميع المنتجات",
   "search_in_app_name": "ابحث في {app_name} ...",
-  "app_name": "متجر ديفي تكنو",
+  "app_name": "الغزالي",
   "no_carousel_image_found": "لم يتم العثور على صورة دوّارة",
   "no_category_found": "لم يتم العثور على فئة",
   "categories_ucf": "الفئات",
@@ -916,4 +916,7 @@ const Map<String, String> arLangs = {
   "hello":"أهلًا",
   "please_enter_your_choice":'يرجى كتابة خيارك هنا (على سبيل المثال 3)',
   "blog_categories_ucf": "تصنيفات المدونة",
+  "app_name_desc":"الغزالي لتجاره المواد الغذائية",
+  "review_app_ucf": "تقييم التطبيق",
+  "do_you_want_to_review_app": "هل ترغب في تقييم التطبيق؟",
 };

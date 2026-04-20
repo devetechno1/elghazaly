@@ -125,7 +125,7 @@ Future<void> _showReviewBottomSheet() async {
               ),
               const SizedBox(height: 16),
               Text(
-                'Do you want to review our app?',
+                'do_you_want_to_review_app'.tr(context: context),
                 style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
@@ -156,7 +156,7 @@ Future<void> _showReviewBottomSheet() async {
                       await inAppReview.openStoreListing();
                     }
                   },
-                  child: const Text('Yes'),
+                  child:  Text('yes_ucf'.tr(context: context)),
                 ),
               ),
               const SizedBox(height: 10),
@@ -166,7 +166,7 @@ Future<void> _showReviewBottomSheet() async {
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  child: const Text('Not now'),
+                  child: Text('no_ucf'.tr(context: context)),
                 ),
               ),
             ],

@@ -46,7 +46,7 @@ class AppConfig {
     PlatformDispatcher.instance.locale,
   );
 
-  static bool isDebugMode = true;
+  static bool isDebugMode = false;
   static bool turnDevicePreviewOn = isDebugMode;
 
   static String search_bar_text(BuildContext context) {
@@ -77,7 +77,7 @@ class AppConfig {
 
   /// use only domain name without http:// or https://
   /// if you make update to old type app from multi/cms to this. to save login put the [oldTokenKey]
-  static const DOMAIN_PATH = "v912.devefinance.com";
+  static const DOMAIN_PATH = "elghazalymart.com";
  
   //do not configure these below
   static const String API_ENDPATH = "api/v2";

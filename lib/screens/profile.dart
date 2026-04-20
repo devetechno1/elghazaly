@@ -339,8 +339,8 @@ final InAppReview inAppReview = InAppReview.instance;
           //   },
           // ),
            BottomVerticalCardListItemWidget(
-                            AppImages.blog,
-                            'review_ucf'.tr(context: context),
+                            AppImages.edit,
+                            'review_app_ucf'.tr(context: context),
                             onPressed: () async {
                               if (await inAppReview.isAvailable()) {
                                 await inAppReview.requestReview();

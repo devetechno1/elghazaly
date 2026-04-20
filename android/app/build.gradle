@@ -3,8 +3,7 @@ plugins {
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
     id "com.google.gms.google-services"
-    id 'com.google.firebase.crashlytics'
-
+    id "com.google.firebase.crashlytics"
 }
 
 def localProperties = new Properties()
@@ -24,6 +23,7 @@ def flutterVersionName = localProperties.getProperty('flutter.versionName')
 if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
+
 def keystoreProperties = new Properties()
 def keystorePropertiesFile = rootProject.file('key.properties')
 if (keystorePropertiesFile.exists()) {
@@ -31,23 +31,21 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace "com.devefinancestore"
+    namespace "com.elghazalymart"
     compileSdk 36
     ndkVersion "28.2.13676358"
-
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
-        
         coreLibraryDesugaringEnabled true
     }
+
     packagingOptions {
         jniLibs {
             useLegacyPackaging = false
         }
     }
-
 
     kotlinOptions {
         jvmTarget = '17'
@@ -58,25 +56,26 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.devefinancestore"
+        applicationId "com.elghazalymart"
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion 35
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         multiDexEnabled true
     }
-    // signingConfigs {
-    //     release {
-    //         keyAlias keystoreProperties['keyAlias']
-    //         keyPassword keystoreProperties['keyPassword']
-    //         storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
-    //         storePassword keystoreProperties['storePassword']
-    //     }
-    // }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+            storePassword keystoreProperties['storePassword']
+        }
+    }
 
     buildTypes {
         release {
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'

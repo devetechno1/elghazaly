@@ -24,6 +24,7 @@ enum SplashScreenType {
     }
   }
 
+
   Color screenBackgroundColor(BuildContext context) {
     switch (this) {
       case splashAnimatedTextWidget:
